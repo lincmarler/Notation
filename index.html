@@ -24,24 +24,24 @@
           loading="lazy">
         <span class="ms-2">Notation</span>
       </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      </button> -->
+      <!-- <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <!-- NAVLINKS -->
-          <a href="#/about" class="nav-link">About</a>
-        </div>
+          NAVLINKS -->
+      <!-- <a href="#/about" class="nav-link">About</a>
       </div>
+      </div> -->
     </nav>
   </header>
 
   <!-- SECTION -->
-  <main id="router-view">
-    <!-- PRIMARY VIEWPORT -->
-  </main>
+  <main id="router-view" class="container-fluid">
 
+
+  </main>
   <!-- SECTION -->
   <footer class="bg-dark text-light">
     <div class="text-center no-select">
@@ -60,3 +60,57 @@
 </body>
 
 </html>
+
+<!-- <form onsubmit="app.NotesController.submitForm()">
+  <div class="col-7 p-5" id="activeNote">
+    <div class="row">
+      <div class="col-4">
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" name="Title" id="noteTitle" placeholder="Title">
+          <label for="noteTitle"></label>
+        </div>
+        <div>
+          <input type="color" value="red" id="color">
+        </div>
+      </div>
+      <p>${this.noteDate}</p>
+    </div>
+    <div class="col-6">
+
+      <textarea name="input" id="text-area" cols="130" rows="10"
+        class="border border-4 border-black rounded mt-4 shadow" placeholder="Notes here...">${this.noteBody}</textarea>
+      <button type="submit" class="btn btn-success shadow">Save Note</button>
+    </div>
+  </div>
+  </div>
+</form> -->
+
+<!-- <section class="row">
+  <div class="col-4">
+    <div>
+      <h3>Notes: <span id="totalNotes">0</span></h3>
+    </div>
+    <div id="notesList"></div> -->
+
+<!-- <form onsubmit="app.NotesController.submitForm()">
+      <div class="col-7 p-5">
+        <div class="row">
+          <div>
+            <div class="form-floating mb-3 col-12">
+              <input required type="text" minLength="4" maxLength="10" class"form-control" id="noteTitle" name="title"
+                placeholder="Note Title">
+            </div>
+            <div class="form-floating mb-3 col-12">
+              <input required type="color" class="form-control" id="noteColor" name="color" placeholder="Note Color">
+              <label for="noteColor">Note Color</label>
+            </div>
+          </div>
+        </div>
+        <div>Creat Note
+          <button onclick="app.NotesController.createNote()"><i class="mdi mdi-plus"></i>add</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="col-8" id="activeNote">
+</section> -->
