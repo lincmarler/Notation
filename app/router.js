@@ -16,10 +16,11 @@ export const router = [
       <h3>Notes: <span id="totalNotes">0</span></h3>
     </div>
     <div id="notesList"></div>
+    </div>
 
     <form onsubmit="app.NotesController.createNote()">
+    <div class="row">
       <div class="col-7 p-5">
-        <div class="row">
           <div>
             <div class="form-floating mb-3 col-12">
               <input required type="text" minLength="4" maxLength="10" class"form-control" id="noteTitle" name="noteTitle"

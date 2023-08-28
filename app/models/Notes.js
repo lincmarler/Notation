@@ -28,7 +28,7 @@ export class Note {
     get ActiveTemplate() {
         return /*html*/ `
        <form onsubmit="app.NotesController.saveNote()">
-  <div class="col-7 p-5" id="activeNote">
+  <div class="p-5" id="activeNote">
     <div class="row">
       <div class="col-4">
         <div class="mb-3">
@@ -45,7 +45,7 @@ export class Note {
     <div class="col-6">
 
       <textarea name="noteBody" id="noteBody" cols="130" rows="10"
-        class="border border-4 border-black rounded mt-4 shadow" placeholder="Notes here...">${this.noteBody}</textarea>
+        class="border border-4 border-black rounded mt-4 shadow w-100" placeholder="Notes here...">${this.noteBody}</textarea>
       <button type="submit" class="btn btn-success shadow">Save Note</button>
     </div>
   </div>
@@ -55,7 +55,7 @@ export class Note {
 
     get ComputeReportedDateView() {
         let date = this.noteDate
-        return date.toLocaleString('en-us', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })
+        return date.toLocaleString()
     }
 }
 

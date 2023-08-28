@@ -19,6 +19,14 @@ function _drawActive() {
     console.log('drawing active', active)
 }
 
+function _drawTotal() {
+    let totalNotes = AppState.notes.length
+    setHTML('totalNotes', totalNotes)
+    console.log(totalNotes, "totalling")
+}
+
+
+
 // function _drawForm() {
 //     let active = AppState.activeNote
 //     setHTML('activeNote', active.FormTemplate)
@@ -28,9 +36,13 @@ function _drawActive() {
 export class NotesController {
     constructor() {
         _drawNotes()
+        _drawTotal()
         console.log('hello from controller')
         AppState.on('notes', _drawNotes)
     }
+
+
+
 
     setActive(noteId) {
         notesService.setActive(noteId)
@@ -49,14 +61,16 @@ export class NotesController {
 
     createNote() {
         // debugger
+
         window.event.preventDefault()
         const form = window.event.target
         const formData = getFormData(form)
         notesService.createNote(formData)
-
         // _drawActive()
         // _drawForm()
+        _drawTotal()
         console.log('creating note', AppState.notes)
+
 
 
     }
